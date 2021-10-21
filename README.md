@@ -20,8 +20,6 @@ The code in this repository here requires the following software:
     - Printf
     - BARON
 
-Details of the specific versions of these softwares used for provided here can be found in Section 6 of the paper.
-
 Next, we provide the steps that one needs to follow to reproduce our results.
 
 ## Customer Preference Learning
