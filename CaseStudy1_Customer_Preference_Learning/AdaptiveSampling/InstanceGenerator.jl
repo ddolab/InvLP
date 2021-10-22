@@ -8,9 +8,9 @@ include("Decomposition_with_AdaptiveSampling.jl")
 @everywhere include("Utilities.jl")
 
 global rng = MersenneTwister(1234)
-dim = 25
-n = dim
+n = 25
 S = 5
+dim = n
 
 for instance = 1:10
     noisyp = rand(rng,1:1000,dim)

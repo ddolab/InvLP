@@ -1,5 +1,5 @@
 using JuMP, LinearAlgebra, Random, Gurobi, DataFrames, CSV, Printf;
-root=("H:\\Documents\\Research Related\\")
+root=("Please specify the root directory here")
 include("Utilities.jl")
 include("FullSpace.jl")
 #------------------------------------------------------------------------------
@@ -154,7 +154,10 @@ end
 #   Main body of the program
 #------------------------------------------------------------------------------
 rng = MersenneTwister(1234)
-dim = 25 # Dimension of the forward problem
+
+# Edit the following parameters
+n = 25 # Dimension of the forward problem
+J_scheme = 1
 
 # Dummy A and b
 A = zeros(Float64, (2*dim)+1, dim) # Initialize A matrix
@@ -185,17 +188,21 @@ noisy_p = noisy_p/ norm(noisy_p, 1)
 I = 100 # Number of experiments
 TS = 100 # Size of test dataset
 
-n = dim # Some part of this code uses n for the dimension of the forward problem
+dim = n # Some part of this code uses dim for the dimension of the forward problem
 c = length(A[:,1]) # Total number of constraints in the problem
 
 
 for w in [10 20 100] # w decides the level of noise in data, (sigma = 1/w)
     global J # Initialize Number of samples per experiment
-    if w == 10
-        J = 250
-    elseif w == 20
-        J = 250
-    else
+    if J_scheme == 1
+        if w == 10
+            J = 5
+        elseif w == 20
+            J = 10
+        else
+            J = 20
+        end
+    elseif J_scheme == 2
         J = 250
     end
 
