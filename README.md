@@ -32,7 +32,7 @@ The code used to generate results presented in this table can be found [here](ht
 We provide the raw results files, that we used to obtain Table 1, in the folder [here](https://github.com/ddolab/InvLP/tree/main/CaseStudy1_Customer_Preference_Learning/Results/RandomSampling). These can be considered as a sample of what the output from the main program will be.
 
 ### Figure 5
-Data for the three subplots here can also be obtained by running [RandomSampling.jl](https://github.com/ddolab/InvLP/blob/main/CaseStudy1_Customer_Preference_Learning/RandomSampling/RandomSampling.jl). Specifically, solving the random training instances with Algorithm 2 will generate ``ErrEvolSummary_dim_n_Noise_w.csv`` files where, ``n`` stands for the dimension of (FOP) and ``w`` is such that $\sigma = 1/w.$ These ``.csv`` files will have the data on how the prediction error evolves as Algorithm 2 processes data all the 100 experiments one by one. 
+Data for the three subplots here can also be obtained by running [RandomSampling.jl](https://github.com/ddolab/InvLP/blob/main/CaseStudy1_Customer_Preference_Learning/RandomSampling/RandomSampling.jl). Specifically, solving the random training instances with Algorithm 2 will generate ``ErrEvolSummary_dim_n_Noise_w.csv`` files where, ``n`` stands for the dimension of (FOP) and ``w`` is such that $`\sigma = 1/w.`$ These ``.csv`` files will have the data on how the prediction error evolves as Algorithm 2 processes data all the 100 experiments one by one. 
 
 Sample output data for this figure can be found [here](https://github.com/ddolab/InvLP/tree/main/CaseStudy1_Customer_Preference_Learning/Results/RandomSampling/Decomposition/High_fixed_J_250/Results1_dim_25_noise_10).
 
