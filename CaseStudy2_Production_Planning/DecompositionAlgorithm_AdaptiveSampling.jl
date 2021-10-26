@@ -135,7 +135,7 @@ function adaptive_sampling(A,b,obj,noisyp,Atest,btest,testx,instance,S)
         A = Aprime[:,:, ind[2]]
         Experiment += 1
     end
-
+    cd(string(root,"Results"))
     df = DataFrame(Pred_Error_Evolution)
     s = @sprintf "PredictionError_dim_%03.d_apaptivesamp_instance_%03.d.csv" dim instance
     CSV.write(s, df)

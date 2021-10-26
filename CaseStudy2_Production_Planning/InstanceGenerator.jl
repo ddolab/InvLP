@@ -77,7 +77,8 @@ global rng = MersenneTwister(1234)
 
 II = 38 # No of Processes
 JJ = 28 # No of Chemicals involved
-TT = 1 # No of time periods
+H = 1 # No of time periods
+TT = H # This code uses TT isntead of H as the total number of time periods
 S = 100 # number of samples for heuristic adative sampling
 dim = (II+JJ)*TT
 global n = dim
